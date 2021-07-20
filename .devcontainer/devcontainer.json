@@ -1,0 +1,38 @@
+{
+    "name": "React-Native Expo (Typescript)",
+    "build": {
+        "dockerfile": "Dockerfile",
+        // Update 'VARIANT' to pick a Node version: 12, 14, 16
+        "args": {
+            "VARIANT": "16"
+        }
+    },
+    "settings": {
+        "editor.tabCompletion": "onlySnippets",
+        "[javascript]": {
+            "editor.suggest.showKeywords": true,
+            "editor.suggest.showSnippets": true,
+        },
+        "[typescript]": {
+            "editor.suggest.showKeywords": true,
+            "editor.suggest.showSnippets": true,
+        },
+    },
+    // Add the IDs of extensions you want installed when the container is created.
+    "extensions": [
+        "bycedric.vscode-expo",
+        "dbaeumer.vscode-eslint",
+        "jabacchetta.javascript-snippets",
+        "msjsdiag.vscode-react-native",
+        "ms-vscode.vscode-typescript-next",
+        "rbbit.typescript-hero"
+    ],
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [],
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // "postCreateCommand": "yarn install",
+
+    // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+    "remoteUser": "node"
+}
